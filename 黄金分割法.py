@@ -1,7 +1,7 @@
 '''
 Author: 刘博文
 Date: 2022-10-14 15:11:12
-LastEditTime: 2022-10-14 15:17:07
+LastEditTime: 2022-10-14 16:09:55
 Description: 单纯形法自动求解器
 https://github.com/touchfisher
 Copyright (c) 2022 by touchfisher 1632570150@qq.com, All Rights Reserved. 
@@ -10,7 +10,7 @@ def f(x):
     return x**2 + 2*x
 
 if __name__ == '__main__':
-    e,a,b = map(float,input().split())
+    e,a,b = map(float,input("请输入精度(如0.02),以及区间的左右端点a和b,全部以空格隔开:").split())
     lambda2 = a + 0.618 * (b-a)
     f2 = f(lambda2)
     lambda1 = a + b - lambda2
@@ -28,5 +28,6 @@ if __name__ == '__main__':
             lambda2 = a + b - lambda1
             f1 = f2
             f2 = f(lambda2)
+    # 最优点默认保留6位小数，最优值默认保留到整数，如需显示更高精度可去掉round函数
     lambda_finally = round((a + b) / 2, 6)
     print(f"最优点为{lambda_finally},最优值为{round(f(lambda_finally))}")
