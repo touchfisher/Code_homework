@@ -1,8 +1,8 @@
 '''
 Author: 刘博文
 Date: 2022-10-14 15:11:12
-LastEditTime: 2022-10-14 16:09:55
-Description: 单纯形法自动求解器
+LastEditTime: 2022-10-26 20:01:36
+Description: 无约束最优化问题————0.618法
 https://github.com/touchfisher
 Copyright (c) 2022 by touchfisher 1632570150@qq.com, All Rights Reserved. 
 '''
