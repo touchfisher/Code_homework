@@ -1,7 +1,7 @@
 '''
 Author: 刘博文
 Date: 2022-10-14 15:11:12
-LastEditTime: 2022-10-26 20:01:36
+LastEditTime: 2022-10-26 23:38:02
 Description: 无约束最优化问题————0.618法
 https://github.com/touchfisher
 Copyright (c) 2022 by touchfisher 1632570150@qq.com, All Rights Reserved. 
@@ -28,6 +28,5 @@ if __name__ == '__main__':
             lambda2 = a + b - lambda1
             f1 = f2
             f2 = f(lambda2)
-    # 最优点默认保留6位小数，最优值默认保留到整数，如需显示更高精度可去掉round函数
-    lambda_finally = round((a + b) / 2, 6)
-    print(f"最优点为{lambda_finally},最优值为{round(f(lambda_finally))}")
+    lambda_finally = (a + b) / 2
+    print(f"近似最优解为{lambda_finally},近似最优值为{f(lambda_finally)}")
